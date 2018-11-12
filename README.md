@@ -12,6 +12,9 @@ None of the files in the 'Understrap' folder were created or edited by me. These
 All php files found in 'Understrap-child' are files that I have edited / created to make the theme work.
 Some important information will not be found in this repository as some code was added to the actual site once it was setup.
 
+# Plugins Used
+Used the [Yoast SEO](https://yoast.com/wordpress/plugins/seo/) plugin to assist with breadcrumbs and other SEO features.
+
 # Code that was added to the site:
 While logged in to the backend of the site as an administrator:
 
