@@ -1,0 +1,24 @@
+Growth 360 Mockup - Graphic Standards
+
+Color Scheme:
+
+primary: rgba(52, 106, 128, 255)
+primary-lighter: rgba(134, 191, 204, 255)
+secondary: rgba (164, 115, 67, 255)
+highlight: rgba(73, 151, 158, 255)
+hero text: (122, 212, 245, 255)
+body: rgba(57, 53, 54, 255)
+blue text: rgba(176, 229, 247, 255)
+white: (255, 255, 255, 255)
+slider-gray: rgba(233, 233, 233, 233)
+
+Fonts:
+
+body { font-size: 81.25%; }
+
+Brown Headings: Bitter
+Headings: Source Sans Pro
+Body, Buttons, Forms: Open Sans
+
+
+

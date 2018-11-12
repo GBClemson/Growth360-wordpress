@@ -1,0 +1,193 @@
+BLOG-1:
+
+BestLifeQuote.com
+Industry: Life Insurance
+
+Services: SEO / Website Monetization, Content Writing
+
+Our services
+Utilizing Google rankings to put BestLifeQuote.com higher in search results, giving the website more organic leads.
+
+Work in Progress
+We are continually updating the current website content and linking to ranking pages, as well as adding new content. Additionally, we are in the process of completing internal and external link building to boost the pages that generate the most leads.
+
+Working with Growth 360 has been great. Our leads from Best Life Quote have more than tripled since we started working with Jason, Andrea and Paul. 
+Doug Mitchell, CLU, Ogletree Financial Services, LLC, BestLifeQuote.com
+
+/////////////////////////////////
+
+BLOG-2:
+
+Wealthy Single Mommy
+Industry: Personal Finance
+
+Services: SEO / Monetization
+
+Starting line
+Emma Johnson, Founder of Wealthysinglemmomy.com, had a major setback when we first started working for her: she was losing more than 75% of her organic traffic. Because of that, we put monetization on the back burner and focused on fixing problems that were causing her to lose the user�s interest when they were navigating on her page.
+
+Finish line
+Emma topped out at 67k organic visitors a few months before she began working with Growth 360. After the slight setback of a penalty, we are now back to 62k visitors and climbing.
+
+Work in progress
+After our initial site fixes, we focused our efforts towards expanding Emma into affiliates that make the most sense for her and her brand. We are continually working on posting new content that expands her reach into more affiliate-related areas.
+
+I am so grateful to work with Growth360. Their team is so professional, knowledgeable and are taking my site and business to a level that was unattainable without them. 
+Emma Johnson, Wealthysinglemommy.com
+
+/////////////////////////////
+
+BLOG-3:
+
+Cash Money Life
+Industry: Insurance
+
+Services: SEO / Website Monetization, Content Writing
+
+Starting line
+Cashmoneylife.com came to us with two major problems to be fixed: site auditing and recovering lost traffic. Our goal in solving these problems was to ultimately increase revenue on the site.
+
+Work in progress
+We are currently still in the auditing process of Cashmoneylife.com. As we work through that, we continue to identify posts that need updating for monetization purposes. With both of these combined efforts, we are already seeing success in numbers.
+
+Working with the Growth 360 team has been an absolute pleasure. Together, we mapped out an SEO and growth strategy that included a holistic look at our site. We focused on identifying strengths, opportunities, weaknesses, and areas for improvement. With that in hand, we started implementing the plan. We made quick gains in certain areas and we are currently riding the momentum of continued growth. I look forward to continuing our relationship. Onward and upward! 
+Ryan Guina, Cashmoneylife.com
+
+///////////////////////////////////
+
+BLOG-4:
+
+Good Financial Cents
+Industry: Personal Finance
+Services: SEO / Website Monetization, Content Writing
+Starting line
+Jeff had a very popular Personal Finance blog that was not getting the same kind of revenue that other similar bloggers were generating.
+
+He brought us in to drive more traffic and find more ways for his site to generate income.
+
+Our services
+We help GFC with increasing the traffic that comes to the site and properly monetizing the site to take advantage of that traffic.
+
+This includes adjusting our content to make sure it is well received by the main search engines, making sure already popular pages have the right advertisers, updating existing content that has the chance to improve for search traffic, and identifying new content that is related to current content and can expand the organic reach of the site.
+
+Finish line
+Traffic has grown from just over 250,000 sessions per month to over 750,000 sessions per month.
+
+Work in progress
+We are continuing to look for new revenue opportunities as new advertisers come into the financial space.
+
+We are also looking to expand his reach into financial content that is not covered with current content. The site has hit with a minor search engine penalty in February and we are fixing content that has caused the site to go down from that high month in January (a lull from Jan to Feb is normal but not that much). We have almost completely recovered that lost traffic in less than six months.
+
+ Working with Growth 360 has been immeasurable. My revenues have more than 10�xd and I have so much more time to focus on the areas of the business I enjoy and time with my family. I can�t recommend them enough. 
+Jeff Rose, Founder, GoodFinancialCents.com
+
+
+
+
+///////////////////////////////////////
+
+
+
+
+
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+
+	<header class="entry-header">
+
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+		'</a></h2>' ); ?>
+
+		<?php if ( 'post' == get_post_type() ) : ?>
+
+			<div class="entry-meta">
+				<?php understrap_posted_on(); ?>
+			</div><!-- .entry-meta -->
+
+		<?php endif; ?>
+
+	</header><!-- .entry-header -->
+
+	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+
+	<div class="entry-content">
+
+		<?php
+		the_excerpt();
+		?>
+
+		<?php
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+			'after'  => '</div>',
+		) );
+		?>
+
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+
+		<?php understrap_entry_footer(); ?>
+
+	</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+
+
+<article class="col-sm-6 post-summary">       
+  <?php
+  if ( has_post_thumbnail() ) {
+    $categories = get_the_category();
+    if ( ! empty( $categories ) ) {
+  ?>
+      <ul class="list-inline post-summary-category">
+      <?php
+      foreach( $categories as $category ) {
+        if ( $category->name != 'Featured' ) {
+      ?>
+          <li class="list-inline-item post-summary-category-item">
+            <a href=" <?php esc_url( get_category_link( $category->term_id ) ) ?> " alt=" <?php esc_attr( sprintf( __( '%s posts', 'textdomain' ), $category->name ) ) ?> "> <?php esc_html( $category->name ) ?> </a>
+          </li>
+      <?php 
+        }
+      }
+      ?>
+      </ul>
+    <?php }	?>	
+
+    <a href=" <?php get_the_permalink() ?> " rel="bookmark"> <?php get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'img-fluid' ) ) ?> </a>
+    <h4 class="post-summary-title">
+      <a href=" <?php get_the_permalink() ?> " rel="bookmark"> <?php get_the_title() ?> </a>
+    </h4>
+    <div class="divider-wrap"><hr class="divider divider-left divider-default"></div>
+   <div class="post-summary-body"> <?php get_the_excerpt() ?> </div>
+  <?php
+  } else {
+    // IF the post does NOT have a featured image
+    $categories = get_the_category();
+    if ( ! empty( $categories ) ) {
+  ?>
+      <ul class="list-inline post-summary-category">
+      <?php
+      foreach( $categories as $category ) {
+        if ( $category->name != 'Featured' ) {
+      ?>
+          <li class="list-inline-item post-summary-category-item">
+            <a href=" <?php esc_url( get_category_link( $category->term_id ) ) ?> " alt=" <?php esc_attr( sprintf( __( '%s posts', 'textdomain' ), $category->name ) ) ?> "> <?php esc_html( $category->name ) ?> </a>
+          </li>
+      <?php 
+        }
+      }
+      ?>
+      </ul>
+    <?php }	?>	
+
+    <h4 class="post-summary-title">
+      <a href=" <?php get_the_permalink() ?> " rel="bookmark"> <?php get_the_title() ?> </a>
+    </h4>
+    <div class="divider-wrap"><hr class="divider divider-left divider-default"></div>
+   <div class="post-summary-body"> <?php get_the_excerpt() ?> </div>
+  <?php
+  }
+  ?>
+</article>
